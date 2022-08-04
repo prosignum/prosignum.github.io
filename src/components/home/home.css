@@ -1,0 +1,28 @@
+.title-container-home {
+    font-size: 2rem;
+    padding: 7.5rem 0;
+}
+
+.c-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 6rem;
+}
+
+/* @media only screen and (min-width: 550px) {
+    .c-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .c-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .c-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} */

@@ -1,0 +1,109 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(30, 30, 30, 0.3);
+    min-height: 45rem;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 50%;
+    border-left: solid 0.25rem transparent;
+    border-top: solid 0.5rem transparent;
+    border-image: linear-gradient(to bottom, var(--clr_bright_gold), var(--clr_dark_gold) 50%, rgba(32,32,32,0));
+    border-image-slice: 1;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 50%;
+    border-right: solid 0.25rem transparent;
+    border-bottom: solid 0.5rem transparent;
+    border-image: linear-gradient(to top, var(--clr_bright_gold), var(--clr_dark_gold) 50%, rgba(32,32,32,0));
+    border-image-slice: 1;
+}
+
+.card:hover {
+    transform: translateY(-2rem);
+    transition: transform 0.5s;
+}
+
+.card-title-elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon {
+    position: absolute;
+    top: -3.3rem;
+    right: -3.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 7.5rem;
+    color: rgba(206, 206, 206, 0.1);
+    border: solid 1.5rem rgba(206, 206, 206, 0.1);
+    width: 15rem;
+    height: 15rem;
+}
+
+.animated-line {
+    height: 0.2rem;
+    width: 0%;
+    background: linear-gradient(to right, var(--clr_bright_gold), var(--clr_dark_gold) 40%, rgba(32,32,32,0));
+    box-shadow: 0 0 1rem var(--clr_dark_gold);
+    transition: 0.5s ease;
+}
+
+@keyframes grow {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.card:hover .animated-line {
+    animation: grow 0.3s cubic-bezier(0,0,0,0);
+    width: 100%;
+}
+
+.card-content {
+    position: absolute;
+    top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 1.5rem;
+}
+
+.card-content h2 {
+    font-size: 2.5rem;
+}
+
+.card-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.card-click {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 2.5rem;
+    width: 100%;
+}

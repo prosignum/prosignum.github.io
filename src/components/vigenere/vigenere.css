@@ -1,0 +1,18 @@
+.title-container-vigenere {
+    font-size: 2rem;
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container-vigenere h1 {
+    padding-bottom: 0.3rem;
+    padding-right: 0.2rem;
+}
+
+.vigenere-inout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 6rem;
+}

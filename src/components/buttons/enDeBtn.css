@@ -1,0 +1,45 @@
+.ende-container {
+    padding-top: 2.5rem;
+}
+
+.ende-checkbox {
+    display: none;
+}
+
+.ende-label {
+    width: 11.3rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(253, 216, 112, 0.10);
+    color: var(--clr_bright_gold);
+    border: solid 0.2rem var(--clr_bright_gold);
+    box-shadow: 0 0 1rem var(--clr_dark_gold);
+    border-radius: 2.5rem;
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.ende-indicator {
+    height: 100%;
+    width: 50%;
+    background-color: rgba(32, 32, 32, 1);
+    position: absolute;
+    right: -0.05rem;
+    top: 0;
+    border: solid 0.1rem var(--clr_bright_gold);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 0.5rem var(--clr_dark_gold);
+    transition: 0.25s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    outline: none;
+}
+
+.active {
+    transform: translateX(-5.5rem);
+}

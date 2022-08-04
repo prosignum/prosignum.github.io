@@ -1,0 +1,69 @@
+.copy-paste-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.copy-paste-btns {
+    border: solid 0.2rem var(--clr_bright_gold);
+    background-color: rgba(253, 216, 112, 0.10);
+    box-shadow: 0 0 1rem var(--clr_dark_gold);
+}
+
+.copy-paste-btns:nth-child(1),
+.paste-btn {
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+}
+
+.copy-paste-btns:nth-child(3),
+.reset-btn {
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+
+.copy-btn, 
+.paste-btn,
+.reset-btn {
+    background-color: transparent;
+    color: var(--clr_bright_gold);
+    font-weight: 700;
+    font-size: 1.25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.copy-btn svg, 
+.paste-btn svg,
+.reset-btn svg {
+    color: var(--clr_bright_gold);
+    font-size: 3rem;
+    margin-right: 0.25rem;
+    display: block;
+}
+
+.copy-paste-info {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.copy-paste-info svg {
+    color: var(--clr_bright_gold);
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.hidden {
+    visibility: hidden;
+}

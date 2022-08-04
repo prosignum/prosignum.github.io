@@ -1,0 +1,102 @@
+.inout-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(32, 32, 32, 0.3);
+    min-height: 45rem;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+.inout-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 50%;
+    border-left: solid 0.25rem transparent;
+    border-top: solid 0.5rem transparent;
+    border-image: linear-gradient(to bottom, var(--clr_bright_gold), var(--clr_dark_gold) 50%, rgba(32,32,32,0));
+    border-image-slice: 1;
+    pointer-events: none;
+}
+
+.inout-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 50%;
+    border-right: solid 0.25rem transparent;
+    border-bottom: solid 0.5rem transparent;
+    border-image: linear-gradient(to top, var(--clr_bright_gold), var(--clr_dark_gold) 50%, rgba(32,32,32,0));
+    border-image-slice: 1;
+    pointer-events: none;
+}
+
+.inout-icon {
+    position: absolute;
+    top: -3.3rem;
+    right: -3.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 7.5rem;
+    color: rgba(206, 206, 206, 0.1);
+    border: solid 1.5rem rgba(206, 206, 206, 0.1);
+    width: 15rem;
+    height: 15rem;
+}
+
+.inout-title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 2rem;
+    width: 100%;
+}
+
+.inout-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.inout-settings {
+    justify-content: center;
+}
+
+.input-form {
+    height: 37.5rem;
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.input-form textarea{
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    padding: 1rem;
+    background-color: rgba(206, 206, 206, 0.025);
+    color:  var(--clr_grey);
+}
+
+.output {
+    height: 37.5rem;
+    margin-top: 2.5rem;
+}
+
+.output-content {
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    padding: 1rem;
+    background-color: rgba(206, 206, 206, 0.025);
+    color:  var(--clr_grey);
+}

@@ -1,0 +1,44 @@
+.cipher-container {
+    display: flex;
+    justify-content: center;
+}
+
+.rot-cipher-container {
+    width: 100%;
+    position: relative;
+    display: grid;
+    gap: 2rem;
+}
+
+.rot-slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 0.5rem;
+    outline: none;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to left, var(--clr_bright_gold), var(--clr_dark_gold) 90%);
+    box-shadow: 0 0 0.5rem var(--clr_dark_gold);
+    cursor: pointer;
+}
+
+.rot-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+   background-color: rgba(32, 32, 32, 1);
+   border: solid 0.1rem var(--clr_bright_gold);
+   border-radius: 50%;
+   width: 3rem;
+   height: 3rem;
+   transition: 0.25s ease-in-out;
+}
+
+.rot-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 1rem var(--clr_dark_gold);
+}
+
+.rot-info {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.25rem;
+}

@@ -1,0 +1,37 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.logo-lock {
+    font-size: 2.5rem;
+    color: var(--clr_bright_gold);
+}
+
+.logo h1 {
+    font-family: var(--font_orbitron);
+    font-size: 2.5rem;
+}
+
+.sqr-container {
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sqrs {
+    background-color: var(--clr_black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.sqr {
+    background-color: var(--clr_bright_gold);
+    height: 0.5rem;
+    width: 0.5rem;
+    border: solid 0.1rem var(--clr_black);
+}
