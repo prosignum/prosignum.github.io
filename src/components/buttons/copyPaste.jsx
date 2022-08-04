@@ -32,7 +32,7 @@ function CopyPaste({ getPaste, outputTxt }) {
       setTimeout(() => {
         setShowMessage(false);
         setMessage('');
-      }, [2000]);
+      }, [3000]);
       // Catch error -> Mainly happens with Firefox without clipboard extension or with Safari privacy hardening
     } catch (error) {
       setShowMessage(true);
@@ -42,7 +42,7 @@ function CopyPaste({ getPaste, outputTxt }) {
       setTimeout(() => {
         setShowMessage(false);
         setMessage('');
-      }, [2000]);
+      }, [3000]);
 
       console.log('Error -> Check https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText. Also, strict privacy settings in a browser might be cause of this (eg. Safari). ', error);
     }
