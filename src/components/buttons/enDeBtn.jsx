@@ -4,13 +4,22 @@ import { BsKeyFill } from 'react-icons/bs';
 import './enDeBtn.css';
 
 function EnDeBtn({ toggleDecrypt }) {
+    /*-----------------------------*/
+    /*---- Declaring variables ----*/
+    /*-----------------------------*/
     const [checked, setChecked] = useState(false);
 
+    /*---------------------------------------------------------------------*/
+    /*---- Toggle button looks and execute prop function toggleDecrypt ----*/
+    /*---------------------------------------------------------------------*/
     const handleCheck = () => {
         setChecked(!checked);
         toggleDecrypt();
     }
 
+    /*---------------------*/
+    /*---- Return View ----*/
+    /*---------------------*/
     return (
         <div className='ende-container'>
             <input id='ende-checkbox' className='ende-checkbox' type="checkbox" onChange={handleCheck} />

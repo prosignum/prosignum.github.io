@@ -122,7 +122,7 @@ function Rot() {
       <div className='rot-inout'>
         <InputFrame component={<InputForm getData={getData} pasted={pasted} pasteItem={pasteItem} />} />
         <SettingFrame
-          component={<CopyPaste getData={getData} getPaste={getPaste} outputTxt={outputTxt} />}
+          component1={<CopyPaste getData={getData} getPaste={getPaste} outputTxt={outputTxt} />}
           component2={<RotSlider getCipher={getCipher} />}
           component3={<EnDeBtn toggleDecrypt={toggleDecrypt} />} 
         />

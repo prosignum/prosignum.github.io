@@ -1,14 +1,14 @@
 import React from 'react';
 import { FaCogs } from 'react-icons/fa';
 
-function SettingFrame( { component, component2, component3 } ) {
+function SettingFrame( { component1, component2, component3 } ) {
     return (
         <div className='inout-container inout-settings'>
             <div className='inout-icon'>
                 <FaCogs />
             </div>
             <form className='inout-content'>
-                {component}
+                {component1}
                 {component2}
                 {component3}
             </form>

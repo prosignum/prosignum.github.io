@@ -105,7 +105,7 @@ function Atbash() {
             </div>
             <div className='atbash-inout'>
                 <InputFrame component={<InputForm getData={getData} pasted={pasted} pasteItem={pasteItem} />} />
-                <SettingFrame component={<CopyPaste getPaste={getPaste} outputTxt={outputTxt} />} />
+                <SettingFrame component1={<CopyPaste getPaste={getPaste} outputTxt={outputTxt} />} />
                 <OutputFrame component={<OutputForm sendData={outputTxt} />} />
             </div>
         </section>

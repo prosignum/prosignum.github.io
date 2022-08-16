@@ -3,20 +3,27 @@ import { BiErrorCircle } from 'react-icons/bi';
 import './keyword.css';
 
 function Keyword({ getKeyword }) {
-
+    /*-----------------------------*/
+    /*---- Declaring variables ----*/
+    /*-----------------------------*/
     const [keyword, setKeyword] = useState('');
     const [showMessage, setShowMessage] = useState(false);
     const [message, setMessage] = useState('');
     const refInput = useRef();
     const alphabets = [...Array(26)].map((_, i) => String.fromCharCode(65 + i));
 
+    /*---------------------------------------------------------------------*/
+    /*---- Toggle button looks and execute prop function toggleDecrypt ----*/
+    /*---------------------------------------------------------------------*/
     const changeKeyword = (e) => {
+        // Prevent form default functionality
         e.preventDefault();
 
+        // Declare variables
         const key = e.target.value;
         let word = '';
         const returnData = [];
-
+        
         if (key.length > 0) {
             for (let i = 0; i < key.length; i++) {
                 if (alphabets.includes(key[i].toUpperCase())) {
@@ -38,13 +45,21 @@ function Keyword({ getKeyword }) {
         getKeyword(returnData);
     }
 
+    /*--------------------------------------------------------------------------------*/
+    /*---- Reset keyword input, keyword and set prop function getKeyword to empty ----*/
+    /*--------------------------------------------------------------------------------*/
     const clearKeyWord = (e) => {
+        // Prevent form default functionality
         e.preventDefault();
+
         refInput.current.value = '';
         setKeyword('');
         getKeyword('');
     }
 
+    /*---------------------*/
+    /*---- Return View ----*/
+    /*---------------------*/
     return (
         <div className='keyword-container'>
             <div className='keyword-info outputs'>
