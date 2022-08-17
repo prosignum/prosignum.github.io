@@ -72,13 +72,16 @@
     justify-content: center;
 }
 
-.input-form {
+.input-form,
+.output {
     height: 37.5rem;
     position: relative;
     margin-top: 2.5rem;
 }
 
-.input-form textarea{
+.input-form textarea,
+.output-content,
+.analysis-output {
     width: 100%;
     min-height: 100%;
     max-height: 100%;
@@ -88,15 +91,7 @@
 }
 
 .output {
-    height: 37.5rem;
-    margin-top: 2.5rem;
-}
-
-.output-content {
-    width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    padding: 1rem;
-    background-color: rgba(206, 206, 206, 0.025);
-    color:  var(--clr_grey);
+/*  height: 37.5rem;    */
+/*  margin-top: 2.5rem;   */
+    word-wrap: break-word;
 }

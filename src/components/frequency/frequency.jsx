@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputFrame from '../inputOutput/inputFrame';
 import OutputFrame from '../inputOutput/outputFrame';
 import SettingFrame from '../inputOutput/settingFrame';
+import AnalysisFrame from '../inputOutput/analysisFrame';
+import AnalysisOutput from '../inputOutput/analysisOutput';
 import InputForm from '../inputOutput/inputForm';
 import OutputForm from '../inputOutput/outputForm';
+import CopyPaste from '../buttons/copyPaste';
 import './frequency.css';
 
 function Frequency() {
@@ -34,6 +37,10 @@ function Frequency() {
     setPasted(true);
   } 
 
+  useEffect(() => {
+    setOutputTxt(inputTxt);
+  }, [inputTxt])
+
   return (
     <section className='frequeny-container'>
       <div className='title-container-frequency'>
@@ -41,8 +48,12 @@ function Frequency() {
       </div>
       <div className='frequency-inout'>
         <InputFrame component={<InputForm getData={getData} pasted={pasted} pasteItem={pasteItem} />} />
-        <SettingFrame />
         <OutputFrame component={<OutputForm sendData={outputTxt} />} />
+        <AnalysisFrame component={<AnalysisOutput />} />
+        <SettingFrame
+          component1={<CopyPaste getPaste={getPaste} outputTxt={outputTxt} />}
+        />
+
       </div>
     </section>
   )
