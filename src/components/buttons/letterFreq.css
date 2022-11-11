@@ -1,0 +1,17 @@
+.analyze-btn {
+    border: solid 0.2rem var(--clr_bright_gold);
+    background-color: rgba(253, 216, 112, 0.10);
+    box-shadow: 0 0 1rem var(--clr_dark_gold);
+    border-radius: 2.5rem;
+    color: var(--clr_bright_gold);
+    font-weight: 700;
+    font-size: 1.25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    gap: 1rem;
+    cursor: pointer;
+}
