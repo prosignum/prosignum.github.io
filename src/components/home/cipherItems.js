@@ -12,7 +12,7 @@ export const ciphers = [
     {
         id: 2,
         title: "ROT-13",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident tempore deserunt recusandae tenetur sint soluta dignissimos consectetur maiores molestias corrupti possimus, repellendus ullam doloribus, distinctio quis harum voluptatem porro veniam!",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         path: "/rot-13",
         icon: <GiCombinationLock />,
     },
